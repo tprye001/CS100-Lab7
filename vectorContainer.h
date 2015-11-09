@@ -51,7 +51,7 @@ void vectorContainer::set_sort(SortAlgorithm * s) {
 }
 
 void vectorContainer::sort() {
-  sortAlg->sort();
+  sortAlg->sort(this);
   return;
 }
 
