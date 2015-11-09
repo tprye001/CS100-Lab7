@@ -1,6 +1,9 @@
+#ifndef LISTCON_H
+#define LISTCON_H
+
 #include "container.h"
 #include <List>
-#include "SortAlgorithm"
+#include "sort.h"
 
 class listContainter{
   private:
@@ -67,6 +70,7 @@ void listContainer::set_sort(SortAlgorithm* s) { /* which sets a private member 
  return;
 }
 void listContainer::sort() { /*which calls the SortAlgorithm’s sort function */
-  sortAlg->sort();
+  sortAlg->sort(this);
   return;
 }
+#endif
