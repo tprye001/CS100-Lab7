@@ -6,6 +6,6 @@
 class SortAlgorithm {
   public:
     virtual void sort(Container * c) = 0;
-}
+};
 
 #endif
