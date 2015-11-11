@@ -1,6 +1,8 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
 
+class sort;
+
 class Container {
   private:
     SortAlgortihm * s;
