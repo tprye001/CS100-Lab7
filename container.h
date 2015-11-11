@@ -9,7 +9,7 @@ class Container {
   private:
     SortAlgorithm * s;
   public:
-    virtual int at (int i) = 0;
+    virtual int & at (int i) = 0;
     virtual void swap(int i, int j) = 0;
     virtual void insert (int element) = 0;
     virtual void print () = 0;

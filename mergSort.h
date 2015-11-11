@@ -12,21 +12,6 @@ class MergeSortAlgorithm : public SortAlgorithm {
     void sort(Container * c);
 };
 
-void MergeSortAlgorithm::sort (Container * c) {
-  mergeSortHelp(c, 0, c->size()-1);
-  return;
-}
-
-void mergeSortHelp(Container * c, int start, int end) {
-  if (end - start <= 1) return;
-
-  mergeSortHelp(c, start, (start+end)/2);
-  mergeSortHelp(c, ((start+end)/2)+1, end);
-
-  merge(c, start, end);
-  return;
-}
-
 void merge(Container * c, int start, int end) {
   int size = (start - end) + 1;
   int mid = ((start + end) / 2) + 1;
@@ -61,6 +46,21 @@ void merge(Container * c, int start, int end) {
 
   for (int n = 0; n < size; n++)
     c->at(start + n) = scratch.at(n);
+}
+
+void mergeSortHelp(Container * c, int start, int end) {
+  if (end - start <= 1) return;
+
+  mergeSortHelp(c, start, (start+end)/2);
+  mergeSortHelp(c, ((start+end)/2)+1, end);
+
+  merge(c, start, end);
+  return;
+}
+
+void MergeSortAlgorithm::sort (Container * c) {
+  mergeSortHelp(c, 0, c->size()-1);
+  return;
 }
 
 #endif

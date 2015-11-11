@@ -14,14 +14,14 @@ class BubbleSortAlgorithm : public SortAlgorithm{
 };
 
 void BubbleSortAlgorithm::sort (Container * c) {
-  int n = c.size();
+  int n = c->size();
   bool swapped = true;
 
   while (swapped) {
     swapped = false;
     for (int i = 1; i < n-1; i++) {
-      if (c.at(i-1) > c.at(i)) {
-        swap(i-1, i);
+      if (c->at(i-1) > c->at(i)) {
+        c->swap(i-1, i);
         swapped = true;
       }
     }

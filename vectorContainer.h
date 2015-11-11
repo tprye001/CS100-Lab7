@@ -4,45 +4,46 @@
 #include "container.h"
 #include <vector>
 #include <iostream>
+#include "sort.h"
 
-class Container : vectorContainer {
+class vectorContainer : public Container {
   private:
     std::vector<int> vecCon;
     SortAlgorithm * sortAlg;
   public:
     vectorContainer ();
-    vectorContainer (std::vector<int> v) : vecCon(v);
-    int at (int i);
+    vectorContainer (std::vector<int> v) : vecCon(v) {}
+    int & at (int i);
     void swap (int i, int j);
     void insert (int element);
     void print();
     int size();
-    void set_sort(SortAlgortithm * s);
+    void set_sort(SortAlgorithm * s);
     void sort();
 };
 
-int vectorContainer::at (int i) {
-  return v.at(i);
+int & vectorContainer::at (int i) {
+  return vecCon.at(i);
 }
 
 void vectorContainer::swap (int i, int j) {
-  std::swap(v.at(i), v.at(j);
+  std::swap(vecCon.at(i), vecCon.at(j));
   return;
   }
 
 void vectorContainer::insert (int element) {
-  v.push_back(element);
+  vecCon.push_back(element);
   return;
 }
 
 void vectorContainer::print() {
-  for (unsigned int c; c < v.size(); c++) 
-  std::cout << v.at(c) << ' ';
-  std::cout << endl;
+  for (unsigned int c; c < vecCon.size(); c++) 
+  std::cout << vecCon.at(c) << ' ';
+  std::cout << std::endl;
 }
 
 int vectorContainer::size() {
-  return v.size();
+  return vecCon.size();
 }
 
 void vectorContainer::set_sort(SortAlgorithm * s) {
