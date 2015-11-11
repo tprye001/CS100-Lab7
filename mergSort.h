@@ -22,7 +22,8 @@ void mergeSortHelp(Container * c, int start, int end) {
   mergeSortHelp(c, start, (start+end)/2);
   mergeSortHelp(c, ((start+end)/2)+1, end);
 
-  merge
+  c->merge(start, end);
+  return;
 }
 
 #endif

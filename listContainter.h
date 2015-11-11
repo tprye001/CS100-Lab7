@@ -17,6 +17,7 @@ class listContainter{
     void insert(int element); //which inserts an int element to the end of the container
     void print(); //which prints every element in order
     int size(); //which prints the number of elements in the container
+    int merge(); //which takes care of the merging for mergsort because I can't be bothered to come up with a more elegant solution
     void set_sort(SortAlgorithm* s); //which sets a private member variable of type SortAlgorithm*
     void sort(); //which calls the SortAlgorithm’s sort function
 };
@@ -65,6 +66,13 @@ void listContainer::print() { /*which prints every element in order*/
 int listContainer::size() {/* which prints the number of elements in the container*/
   return listCon.size();
 }
+
+void listContainer::merge(int start, int end) {
+  std::list<int> ret;
+
+  
+}
+
 void listContainer::set_sort(SortAlgorithm* s) { /* which sets a private member variable of type SortAlgorithm* */
  sortAlg = s;
  return;
