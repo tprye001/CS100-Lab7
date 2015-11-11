@@ -7,7 +7,7 @@
 #include "sort.h"
 
 
-class BubbleSortAlgorithm {
+class BubbleSortAlgorithm : public SortAlgorithm{
   private:
   public:
     void sort (Container * c);

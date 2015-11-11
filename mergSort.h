@@ -6,14 +6,14 @@
 #include "vectorContainer.h"
 #include <vector>
 
-class MergeSortAlgorithm {
+class MergeSortAlgorithm : public SortAlgorithm {
   private:
   public:
     void sort(Container * c);
 };
 
 void MergeSortAlgorithm::sort (Container * c) {
-  mergeSortHelp(c, 0, c.size()-1);
+  mergeSortHelp(c, 0, c->size()-1);
   return;
 }
 
