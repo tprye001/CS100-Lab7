@@ -1,7 +1,7 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
 
-class sort;
+class SortAlgorithm;
 
 class Container {
   private:

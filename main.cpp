@@ -2,9 +2,9 @@
 #include "sort.h"
 #include "selectionSort.h"
 #include "bubbleSort.h"
-#include "listContainer.h"
-#include "mergeSort.h"
-#include "vecorContainer.h"
+#include "listContainter.h"
+#include "mergSort.h"
+#include "vectorContainer.h"
 #include <list>
 #include <vector>
 
