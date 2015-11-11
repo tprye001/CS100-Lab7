@@ -22,8 +22,44 @@ void mergeSortHelp(Container * c, int start, int end) {
   mergeSortHelp(c, start, (start+end)/2);
   mergeSortHelp(c, ((start+end)/2)+1, end);
 
-  c->merge(start, end);
+  merge(c, start, end);
   return;
+}
+
+void merge(Container * c, int start, int end) {
+  int size = (start - end) + 1;
+  int mid = ((start + end) / 2) + 1;
+
+  std::vector<int> scratch(size);
+
+  int i = start;
+  int j = mid;
+
+  for (int k = 0; k < size; k++) {
+    if (c->at(i) < c->at(j)) {
+      scratch.at(k) = c->at(i);
+      i++;
+    }
+    else {
+      scratch.at(k) = c->at(j);
+      j++;
+    }
+    if(j > end) {
+      while (i < mid) {
+        k++;
+        scratch.at(k) = c->at(i);
+      }
+    }
+    else if (i >= mid) {
+      while (j <= end) {
+        k++;
+        scratch.at(k) = c->at(i);
+      }
+    }
+  }
+
+  for (int n = 0; n < size; n++)
+    c->at(start + n) = scratch.at(n);
 }
 
 #endif
