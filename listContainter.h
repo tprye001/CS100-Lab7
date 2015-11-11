@@ -3,15 +3,15 @@
 
 #include "container.h"
 #include <list>
+#include <iostream>
 #include "sort.h"
 
-class listContainter{
+class listContainer{
   private:
-    std::list listCon;
+    std::list<int> listCon;
     SortAlgorithm* sortAlg;
   public:
-    listContainer();
-    listContainer(std::list<int> l) : listCon(l);
+    listContainer(std::list<int> l) { listCon = l; }
     int at(int i); //which returns the element at index i
     void swap(int i, int j); //which swaps the elements at index i and index j
     void insert(int element); //which inserts an int element to the end of the container
@@ -22,7 +22,7 @@ class listContainter{
 };
 
 int listContainer::at(int i) {/* which returns the element at index i*/
-  std::iterator it = listCon.begin();
+  std::list<int>::iterator it = listCon.begin();
   if( i > listCon.size()){
     return -1;
   }
@@ -34,13 +34,13 @@ int listContainer::at(int i) {/* which returns the element at index i*/
 
 void listContainer::swap(int i, int j) { /*which swaps the elements at index i and index j*/
   if( i > listCon.size() || j > listCon.size()){
-    return -1;
+    return;
   }
-  std::iterator it1 = listCon.begin();
+  std::list<int>::iterator it1 = listCon.begin();
   for (unsigned c = 0; c <= i; c++){
     it1++;
   }
-  std::iterator it2 = listCon.begin();
+  std::list<int>::iterator it2 = listCon.begin();
   for (unsigned c = 0; c <= j; c++){
     it2++;
   }
@@ -54,12 +54,12 @@ void listContainer::insert(int element) { /*which inserts an int element to the 
 }
 
 void listContainer::print() { /*which prints every element in order*/
-  iterator it = listCon.begin();
+  std::list<int>::iterator it = listCon.begin();
   for(unsigned c = 0; c < listCon.size(); c++){
-    cout << *it << " ";
+    std::cout << *it << " ";
     it++;
   }
-  cout << endl;
+  std::cout << std::endl;
   return;
 }
 int listContainer::size() {/* which prints the number of elements in the container*/

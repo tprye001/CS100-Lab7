@@ -1,11 +1,13 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
 
-class SortAlgorithm;
+#include "sort.h"
+
+//class SortAlgorithm;
 
 class Container {
   private:
-    SortAlgortihm * s;
+    SortAlgorithm * s;
   public:
     virtual int at (int i) = 0;
     virtual void swap(int i, int j) = 0;

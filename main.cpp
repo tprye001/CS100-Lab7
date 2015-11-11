@@ -7,6 +7,7 @@
 #include "vectorContainer.h"
 #include <list>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 

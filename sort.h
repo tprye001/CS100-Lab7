@@ -3,7 +3,7 @@
 
 #include "container.h"
 
-class container;
+class Container;
 
 class SortAlgorithm {
   public:
