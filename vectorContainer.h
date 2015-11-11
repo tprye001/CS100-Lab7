@@ -5,7 +5,7 @@
 #include <vector>
 #include <iostream>
 
-class vectorContainer {
+class Container : vectorContainer {
   private:
     std::vector<int> vecCon;
     SortAlgorithm * sortAlg;

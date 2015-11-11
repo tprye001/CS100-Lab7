@@ -6,7 +6,7 @@
 #include <iostream>
 #include "sort.h"
 
-class listContainer{
+class Container : listContainer{
   private:
     std::list<int> listCon;
     SortAlgorithm* sortAlg;
