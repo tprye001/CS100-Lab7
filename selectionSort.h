@@ -21,9 +21,9 @@ void SelectionSortAlgorithm::sort(Container *c){
       if(c->at(j) < c->at(min)){
         min = j;
       }
-      if(min != i) {
+    }
+    if(min != i) {
         c->swap(c->at(i), c->at(min));
-      }
     }
   }
   return;
