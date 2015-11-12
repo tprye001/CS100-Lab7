@@ -7,7 +7,7 @@
 #include "sort.h"
 
 
-class BubbleSortAlgorithm : public SortAlgorithm{
+class BubbleSortAlgorithm : public virtual SortAlgorithm{
   private:
   public:
     void sort (Container * c);

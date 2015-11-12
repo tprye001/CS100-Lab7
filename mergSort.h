@@ -6,7 +6,7 @@
 #include "vectorContainer.h"
 #include <vector>
 
-class MergeSortAlgorithm : public SortAlgorithm {
+class MergeSortAlgorithm : public virtual SortAlgorithm {
   private:
   public:
     void sort(Container * c);

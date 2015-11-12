@@ -6,7 +6,7 @@
 #include "container.h"
 #include "sort.h"
 
-class SelectionSortAlgorithm : public SortAlgorithm {
+class SelectionSortAlgorithm : public virtual SortAlgorithm {
   private:
     
   public:

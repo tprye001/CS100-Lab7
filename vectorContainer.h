@@ -6,13 +6,13 @@
 #include <iostream>
 #include "sort.h"
 
-class vectorContainer : public Container {
+class vectorContainer : public virtual Container {
   private:
     std::vector<int> vecCon;
     SortAlgorithm * sortAlg;
   public:
     vectorContainer ();
-    vectorContainer (std::vector<int> v) : vecCon(v) {}
+    vectorContainer (std::vector<int> v) {vecCon = v;}
     int & at (int i);
     void swap (int i, int j);
     void insert (int element);
@@ -37,9 +37,11 @@ void vectorContainer::insert (int element) {
 }
 
 void vectorContainer::print() {
-  for (unsigned int c; c < vecCon.size(); c++) 
-  std::cout << vecCon.at(c) << ' ';
+  for (unsigned int c = 0; c < vecCon.size(); c++) { 
+    std::cout << vecCon.at(c) << ' ';
+  }
   std::cout << std::endl;
+  return;
 }
 
 int vectorContainer::size() {
