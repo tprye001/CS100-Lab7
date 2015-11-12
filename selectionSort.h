@@ -23,7 +23,7 @@ void SelectionSortAlgorithm::sort(Container *c){
       }
     }
     if(min != i) {
-        c->swap(c->at(i), c->at(min));
+        c->swap(i, min);
     }
   }
   return;

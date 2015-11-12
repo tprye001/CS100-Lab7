@@ -36,7 +36,7 @@ int main(){
 
   vectorContainer test3 = vectorContainer(v1);
   test3.set_sort(&ss);
-  
+
   cout << "Pre Selection Sort: "; 
   test3.print();
   
