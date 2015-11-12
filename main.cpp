@@ -45,7 +45,7 @@ int main(){
   cout << "Post Selection Sort: "; 
   test3.print();
 
-
+/*
   vectorContainer test1 = vectorContainer(v1);
   test1.set_sort(&ms);
   
@@ -56,7 +56,7 @@ int main(){
 
   cout << "Post-Merge Sort: "; 
   test1.print();
-  
+*/
   
   list<int> list1;
   list1.push_back(4);
@@ -64,7 +64,7 @@ int main(){
   list1.push_back(2);
   list1.push_back(3);
   list1.push_back(5);
-
+/*
   listContainer test4 = listContainer(list1);
   test4.set_sort(&ms);
   
@@ -75,7 +75,7 @@ int main(){
   
   cout << "Post Merge Sort: "; 
   test4.print();
-
+*/
   listContainer test5 = listContainer(list1);
   test5.set_sort(&bs);
   cout << "Pre Bubble Sort: "; 
