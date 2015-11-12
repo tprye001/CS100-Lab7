@@ -27,7 +27,7 @@ int & listContainer::at(int i) {/* which returns the element at index i*/
   if( i > listCon.size()){
     std::exit(1);
   }
-  for(unsigned c = 0; c <= i; c++){
+  for(unsigned c = 0; c < i; c++){
     it++;
   }
   return *it;
@@ -38,11 +38,11 @@ void listContainer::swap(int i, int j) { /*which swaps the elements at index i a
     return;
   }
   std::list<int>::iterator it1 = listCon.begin();
-  for (unsigned c = 0; c <= i; c++){
+  for (unsigned c = 0; c < i; c++){
     it1++;
   }
   std::list<int>::iterator it2 = listCon.begin();
-  for (unsigned c = 0; c <= j; c++){
+  for (unsigned c = 0; c < j; c++){
     it2++;
   }
   std::swap(*it1, *it2);

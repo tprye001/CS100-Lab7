@@ -14,6 +14,9 @@ class SelectionSortAlgorithm : public virtual SortAlgorithm {
 };
 
 void SelectionSortAlgorithm::sort(Container *c){
+  if(c->size() == 0 ){
+    return;
+  }
   unsigned min = 0;
   for(unsigned i = 0; i < c->size() - 1; i++){
     min = i;
